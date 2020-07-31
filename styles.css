@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: gray;
+  text-align: center;
+}
+#title {
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+/* main text area */
+textarea {
+  resize: none;
+  font-size: 1.5rem;
+  width: 600px;
+  height: 300px;
+}
+/* *************************** */
+/* CONTAINER for top data */
+#containerForData,
+#quickOptionis {
+  display: flex;
+  justify-content: center;
+}
+/* both counter and action buttons */
+.analysedData,
+#containerForData > button {
+  margin: 10px 25px;
+}
+/* buttoons on top data */
+#containerForData > button {
+  width: 125px;
+}
+/* word and char counts */
+.analysedData {
+  width: 100px;
+}
+/* qucik options */
+#quickOptionis > button {
+  width: 125px;
+  margin: 10px 17px;
+}

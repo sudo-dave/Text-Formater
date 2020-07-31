@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="title">
+        <h1>
+          Text Formater
+        </h1>
+        <p id="subText">
+          Enter some text to get start formating
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <div id="containerForData">
+        <button id="clear">
+          Clear
+        </button>
+
+        <button id="selectText">
+          Select Text
+        </button>
+
+        <input
+          type="text"
+          class="analysedData"
+          id="wordCount"
+          placeholder="word count"
+          readonly="true"
+        />
+
+        <input
+          type="text"
+          class="analysedData"
+          id="charCount"
+          placeholder="char count"
+          readonly="true"
+        />
+      </div>
+
+      <form id="textContainer" oninput="userAction()">
+        <textarea id="userInput" rows="5" cols="0"> </textarea>
+      </form>
+
+      <div id="quickOptionis">
+        <button id="upcaseAll">
+          Upercase All
+        </button>
+
+        <button id="lowercaseAll">
+          lowercae all
+        </button>
+
+        <button id="capSentences">
+          Capitalizae sentenecs
+        </button>
+        <button id="capAll">
+          Captialze Words
+        </button>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
