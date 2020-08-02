@@ -8,6 +8,7 @@ const wordCountLabel = document.getElementById("wordCount");
 //buttons
 const clearBtn = document.getElementById("clear");
 const selectBtn = document.getElementById("selectText");
+const upercaseAll = document.getElementById("upcaseAll");
 
 function userAction() {
   charCountLabel.value = getCharCount(userInput.value);
@@ -24,6 +25,13 @@ selectBtn.addEventListener("click", function () {
   userInput.select();
 });
 
+upercaseAll.addEventListener("click", function () {
+  var inputUpper = userInput.value;
+  inputUpper = inputUpper.toUpperCase();
+
+  userInput.value = inputUpper;
+});
+
 function getCharCount(input) {
   return input.length;
 }
@@ -34,3 +42,6 @@ function getWordCount(input) {
     return "0";
   }
 }
+// function upperCase(input) {
+//   return input.value;
+// }
