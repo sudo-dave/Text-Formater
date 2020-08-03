@@ -8,12 +8,14 @@ const wordCountLabel = document.getElementById("wordCount");
 //buttons
 const clearBtn = document.getElementById("clear");
 const selectBtn = document.getElementById("selectText");
-const upercaseAll = document.getElementById("upcaseAll");
-
+const upercaseAllBtn = document.getElementById("upcaseAll");
+const lowercaseAllbtn = document.getElementById("lowercaseAll");
+//UserAction
 function userAction() {
   charCountLabel.value = getCharCount(userInput.value);
   wordCountLabel.value = getWordCount(userInput.value);
 }
+//Listenrs
 
 clearBtn.addEventListener("click", function () {
   userInput.value = "";
@@ -21,27 +23,35 @@ clearBtn.addEventListener("click", function () {
   wordCountLabel.value = "";
 });
 
-selectBtn.addEventListener("click", function () {
+selectBtn.addEventListener("click", () => {
   userInput.select();
 });
 
-upercaseAll.addEventListener("click", function () {
-  var inputUpper = userInput.value;
-  inputUpper = inputUpper.toUpperCase();
-
-  userInput.value = inputUpper;
+upercaseAllBtn.addEventListener("click", () => {
+  userInput.value = upperCaseAll(userInput.value);
 });
 
+lowercaseAllbtn.addEventListener("click", () => {
+  userInput.value = lowerCaseAll(userInput.value);
+});
+
+//Functions
 function getCharCount(input) {
   return input.length;
 }
 function getWordCount(input) {
   try {
+    console.log(input.match(/\S+/g));
     return input.match(/\S+/g).length;
   } catch {
     return "0";
   }
 }
-// function upperCase(input) {
-//   return input.value;
-// }
+function upperCaseAll(input) {
+  input = input.toUpperCase();
+  return input;
+}
+function lowerCaseAll(input) {
+  input = input.toLowerCase();
+  return input;
+}
